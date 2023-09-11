@@ -4,7 +4,7 @@
 
 Creating a ticketing system for events. Events are scheduled by an event organiser and tickets are allocated to attendees. Events must have a name, date, time, duration, capacity and location. Attendees can view upcoming events and request a ticket for any that have available space. All users (organisers and attendees) need to login before they can change data on the website. However, the public can view events even if they are not logged in. The capacity or popularity of an event is never shown to attendees or the public unless there are fewer than 5% capacity available. In this case ‘last X spaces’ is shown in the list. An event would show ‘FULL’ if the tickets allocated is the same as the capacity. Every ticket that is allocated, will be given a unique value which can be view as a barcode.
 
-Basic functionality is:\
+### Basic functionality is:\
 • User registration\
 • Must have two classes of user – organiser and attendee\
 • All users must provide a valid & verifiable email address and a
@@ -25,7 +25,7 @@ password\
 • Viewing tickets\
 • Attendees can view ticket and barcode for each event for which they have tickets\
 
-A complete application:\
+### A complete application:\
 • Implements the functionality of the basic specification above using Python,
 Flask and Flask-SQLAlchemy with sqlite3.\
 • Make use of JavaScript to enhance the user experience.\
