@@ -9,7 +9,7 @@ Somehow, ./setup.sh does not help to run application.To run this application on 
 5. pip install -r requirements.txt
 6. python3.6 main.py -- for DSC machine or python3 main.py -- any other machine.
 
-I don't know why it does not run with python3 main.py, hence, for DCS machine use python3.6 main.py.
+
 
 
 You should now be able to access the application by navigating to http://localhost:5000 in your web browser.
@@ -29,7 +29,7 @@ Ticket purchasing: Attendees can purchase tickets for events through the applica
 
 Ticket validation: Tickets can be validated using the barcode. The application will verify that the ticket is valid or not.
 
-User management: Organizers can view a list of attendees and promote the attendee as an organizer.
+User management: Organizers can view a list of attendees and promote the attendees as an organizer.
 
 
 Error handling: The application includes error handling to prevent users from entering invalid input or performing unauthorized actions.
