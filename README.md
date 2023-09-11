@@ -6,24 +6,24 @@ Creating a ticketing system for events. Events are scheduled by an event organis
 
 Basic functionality is:
 • User registration
-o Must have two classes of user – organiser and attendee
-o All users must provide a valid & verifiable email address and a
+• Must have two classes of user – organiser and attendee
+• All users must provide a valid & verifiable email address and a
 password
-o Users must provide this 8-character code to register as an organiser
+• Users must provide this 8-character code to register as an organiser
 § Dc5_G1gz
 • User authentication
-o Login with password
+• Login with password
 • Adding an event
-o Only organisers can create events
-o Organisers can promote an attendee’s class to organiser of an event
+• Only organisers can create events
+• Organisers can promote an attendee’s class to organiser of an event
 • Managing events
-o Organisers can cancel an event, but they cannot change the date or time of an event; all attendees with tickets will be notified of any cancellation
-o Organisers will be notified when an event is near capacity
+• Organisers can cancel an event, but they cannot change the date or time of an event; all attendees with tickets will be notified of any cancellation
+• Organisers will be notified when an event is near capacity
 • Ticket allocation
-o Attendees can request a single ticket for an event in the future
-o Attendees can cancel tickets for events in the future
+• Attendees can request a single ticket for an event in the future
+• Attendees can cancel tickets for events in the future
 • Viewing tickets
-o Attendees can view ticket and barcode for each event for which they have tickets
+• Attendees can view ticket and barcode for each event for which they have tickets
 
 A complete application:
 • Implements the functionality of the basic specification above using Python,
