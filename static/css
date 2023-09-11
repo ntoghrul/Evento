@@ -1,0 +1,563 @@
+
+header {
+  margin-top: -0.5em; 
+}
+
+body{
+  background-color: #e9e7e7;
+}
+
+
+
+.navbar_item {
+    display: inline-block;
+    margin-right: 10px; 
+  }
+  .navbar_menu {
+    display: inline-block;
+  }
+
+  .navbar_logo {
+    position:relative;
+    top:5px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family:"Brush Script MT";
+    color: #ff8800;
+    margin-right:1rem;
+    margin-left:0.7em;
+    text-decoration: none;
+    
+  }
+.navbar {
+    background-color: #028518;
+    border-radius: 0 0 15px 15px;
+    height:4em;
+}
+
+.navbar_menu li {
+  margin-right: 1em;
+  font-family:Didot;
+  font-weight:500;
+}
+
+.navbar_menu li a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color:rgb(5, 0, 0);
+  
+}
+.navbar_menu li a:hover {
+  color: #ff8800;
+  font-size:1.43rem;
+}
+.container {
+  text-align: center;
+}
+.eventos{
+  list-style: none;
+  position:absolute;
+  left:24.5rem;
+  width:40%;
+}
+h1{
+  font-size:2.5rem;
+  font-family:Didot;
+}
+a{
+  text-decoration:none;
+  font-size:1.5rem;
+}
+
+.table{
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  width:70%;
+}
+
+.table td, .table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size:18px;
+  font-family:Didot;
+}
+
+.table  tr:nth-child(even){background-color: #f2f2f2;}
+
+.table  tr:hover {background-color: #ddd;}
+
+.table  th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #028518;
+  color:  #fa8a09;
+  font-weight:bolder;
+  font-size:1.5rem;
+}
+
+button{
+  font-family:Didot;
+  font-weight:bolder;
+}
+
+
+
+.eventos li a{
+  color:rgb(5, 0, 0);
+}
+.event-list {
+  border: 2px solid #028518;
+  border-radius: 20px;
+  margin-top: 13px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.event-list:hover {
+  background-color: #ff8800;
+  border-color: #ff8800;
+}
+
+
+
+@media screen and (min-width: 2500px) and (min-height: 1200px) {
+  .event-list {
+    border: 2px solid #028518;
+    border-radius: 20px;
+    margin-top: 13px;
+    padding: 10px;
+    text-align: center;
+    background-color: #f2f2f2;
+    position:relative;
+    left:20rem;
+  }
+}
+
+
+
+.my-31 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container h1 {
+  margin-bottom: 30px;
+}
+
+.event-box {
+  border: 2px solid #ccc;
+  border-radius: 50px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.event-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.event-description {
+  font-size: 20px;
+  margin-bottom: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 5px;
+  width:40%;
+  text-align: left;
+}
+
+.event-date {
+  font-size: 20px;
+  margin-bottom: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 5px;
+  width:40%;
+}
+
+.event-venue {
+  font-size: 20px;
+  margin-bottom: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 5px;
+  width:40%;
+}
+
+.ticket-button:hover {
+  background-color: #ff8800;
+  border-color: #ff8800;
+}
+
+
+.event-cancel {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff8800;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width:12rem;
+  font-size:18px;
+}
+
+.event-cancel:hover {
+  background-color: #ff2929;
+}
+
+.ticket-buy {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff8800;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width:12rem;
+  font-size:18px;
+}
+
+.ticket-buy:hover {
+  background-color: #4CAF50;
+}
+
+  
+.event-date-label {
+  font-weight: bold;
+  font-size: 27px;
+  color: #38913b;
+  
+}
+
+.event-venue-label {
+  font-weight: bold;
+  font-size: 27px;
+  color: #38913b;
+
+}
+
+.alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.8rem;
+  height: 3rem;
+  border-radius: 5px;
+  margin: 10px 0px;
+  padding: 10px;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-error, .alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+#canceling-message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.8rem;
+  height: 3rem;
+  border-radius: 5px;
+  margin: 10px 0px;
+  padding: 10px;
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+.noUpcoming, .p-guest, .p-ticket, .is-full{
+  font-size:1.5rem;
+}
+
+
+
+/* style for the form container */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  padding: 20px;
+  width: 400px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  width:40%;
+}
+
+/* style for the email and password input containers */
+.login-email,
+.login-password {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+  width: 100%;
+}
+
+/* style for the email and password inputs */
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  width: 95%;
+  border: none;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  height:30px;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+/* style for the login button */
+.login-button input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+  width:15rem;
+  font-family:Didot;
+  font-weight:bolder;
+}
+
+.login-button input[type="submit"]:hover {
+  background-color: #38913b;
+}
+
+::placeholder {
+  font-size: 1rem;
+}
+
+input{
+  font-size: 1.2rem;
+}
+
+
+.attendee-button {
+  display: block;
+  margin-top: 5px;
+  margin: 0 auto;
+}
+
+.attendee-button:hover {
+  background-color: #ff8800;
+  border-color: #ff8800;
+}
+
+
+
+
+
+
+/* style for the form container */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  padding: 20px;
+  width: 400px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  width:40%;
+}
+
+/* style for the input containers */
+.register-firstname,
+.register-email,
+.register-password,
+.register-code {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+  width: 100%;
+}
+
+/* style for the inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  width: 95%;
+  border: none;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  height:30px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+/* style for the register button */
+.register-button input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+  width:15rem;
+  font-family:Didot;
+  font-weight:bolder;
+}
+
+.register-button input[type="submit"]:hover {
+  background-color: #38913b;
+}
+
+::placeholder {
+  font-size: 1rem;
+}
+
+input{
+  font-size: 1.1rem;
+}
+
+
+.attendee-button {
+  display: block;
+  margin-top: 5px;
+  margin: 0 auto;
+}
+
+.attendee-button:hover {
+  background-color: #ff8800;
+  border-color: #ff8800;
+}
+
+h4,h3{
+  font-size:1.2rem;
+}
+
+  
+.organize-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  padding: 20px;
+  width: 50%;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.organize-form label {
+  font-size: 1.6rem;
+  margin-top: 25px;
+  margin-bottom:10px;
+  color:#217424;
+  font-family:Didot;
+  font-weight:bolder;
+}
+
+.organize-form input,
+.organize-form textarea {
+  padding: 10px;
+  width: 95%;
+  border: none;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2rem;
+}
+
+.organize-form textarea {
+  height: auto;
+  min-height: 100px;
+}
+
+.organize-button, .validation-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  width:15rem;
+  font-family:Didot;
+  font-weight:bolder;
+}
+
+.organize-button, .validation-button:hover {
+  background-color: #38913b;
+}
+
+
+
+.validation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  padding: 20px;
+  width: 400px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.form-validation {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+  width: 100%;
+}
+
+.validation-text {
+  padding: 10px;
+  width: 95%;
+  border: none;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  height:30px;
+}
+
+.validation-text:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+
+
+
+
+
+
