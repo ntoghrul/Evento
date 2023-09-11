@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block title %}Home{% endblock %}
+{% block content %} 
+<div class="container-11">
+  <h1>Upcoming Events</h1>
+  {% if events %}
+    <ul class="eventos">
+      {% for event in events %}
+        <li class="event-list"><a href="{{ url_for('views.events', event_id=event.id) }}">{{ event.title }}</a></li>
+        
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="noUpcoming">There are no upcoming events</p>
+  {% endif %}
+</div>
+{% endblock %}

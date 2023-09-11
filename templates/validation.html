@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block content %}
+  <h1>Ticket Validation</h1>
+  <h3>Please enter your ticket barcode for validation</h3>
+  <form class="validation" method="post">
+    <div class="form-validation">
+      <input type="text" class="validation-text" id="barcode" name="barcode" placeholder="Enter Barcode">
+    </div>
+    <button type="submit" class="validation-button">Validate Ticket</button>
+  </form>
+{% endblock %}

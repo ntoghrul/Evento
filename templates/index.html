@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Evento{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/attendee.css') }}">
+
+<!-- Script that deletes the flash message after 4 seconds-->
+    <script>
+        setTimeout(function() {
+            let alert = document.querySelector('.alert');
+            if (alert) {
+                alert.remove();
+            }
+        }, 4000);
+    </script>
+    
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="{{ url_for('views.home') }}" class="navbar_logo">Evento</a>
+            {% if current_user.is_authenticated %}
+                {% if current_user.is_organizer %}
+                    <ul class="navbar_menu">
+                        <li class="navbar_item"><a href="{{ url_for('views.logout') }}" class="navbar_link">Logout</a></li>
+                        <li class="navbar_item"><a href="{{ url_for('views.attendee') }}" class="navbar_link">Attendees</a></li>
+                        <li class="navbar_item"><a href="{{ url_for('views.organize_event') }}" class="navbar_link">Organize Event</a></li>
+                    </ul>
+                {% else  %}
+                    <ul class="navbar_menu">
+                        <li class="navbar_item"><a href="{{ url_for('views.logout') }}" class="navbar_link">Logout</a></li>
+                        <li class="navbar_item"><a href="{{ url_for('views.my_tickets') }}" class="navbar_link">My Tickets</a></li>
+                    </ul>
+                {% endif %}
+            {% else %}
+                <ul class="navbar_menu">
+                    <li class="navbar_item"><a href="{{ url_for('views.register') }}" class="navbar_link">Register</a></li>
+                    <li class="navbar_item"><a href="{{ url_for('views.login') }}" class="navbar_link">Login</a></li>
+                    <li class="navbar_item"><a href="{{ url_for('views.ticket_validation') }}" class="navbar_link">Ticket Validation</a></li>
+                </ul>
+            {% endif %}
+         </nav>
+
+         {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                {{ message }}
+                     </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+
+         <div class="container">{% block content %} {% endblock %}</div>
+    </header>
+
+    <script 
+    type="text/javascript" 
+    src="{{ url_for('static', filename='index.js')}}">   
+    </script>
+</body>
+</html>
+

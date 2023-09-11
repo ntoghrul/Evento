@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block title %} Login {% endblock %}
+{% block content %} 
+    <h1>Login</h1>
+    <form  class="login-form" method="POST" action="{{ url_for('views.login') }}">
+        <div class="login-email">
+            <input type="email" id="email" name="email" placeholder="Enter email" required>
+        </div>
+        <div class="login-password">
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+        </div>
+       
+        <div class="login-button">
+            <input type="submit" value="Login">
+        </div>
+    </form>
+{% endblock %}

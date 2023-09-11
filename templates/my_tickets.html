@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+
+{% block content %}
+  <h1>My Tickets</h1>
+  {% if tickets %}
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>Barcode</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for ticket in tickets %}
+          <tr>
+            <td>{{ ticket.event.title }}</td>
+            <td>{{ ticket.barcode }}</td>
+            <td>
+              <form method="post" action="{{ url_for('views.ticket_cancel', ticket_id=ticket.id) }}">
+                <button type="submit" class="ticket-button">Cancel Ticket</button>
+              </form>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p class="p-ticket">You have not purchased any tickets yet</p>
+  {% endif %}
+{% endblock %}

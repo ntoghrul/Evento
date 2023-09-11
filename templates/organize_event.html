@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <h1>Create Event</h1>
+    <form class="organize-form" method="POST">
+
+        <label class="organize-title-label" for="title">Title</label>
+        <input class="organize-title-input" type="text" id="title" name="title" required>
+
+        <label class="organize-description-label" for="description">Description</label>
+        <textarea class="organize-description-input" id="description" name="description" required></textarea>
+
+        <label class="organize-venue-label" for="venue">Venue</label>
+        <input class="organize-venue-input" type="text" id="venue" name="venue" required>
+
+        <label class="organize-date-label" for="date">Date and Time</label>
+        <input class="organize-date-input" type="datetime-local" id="date" name="date" required>
+        
+
+        <label class="organize-capacity-label" for="capacity">Capacity</label>
+        <input class="organize-capacity-input" type="number" id="capacity" name="capacity" required>
+
+        <button class="organize-button" type="submit">Create</button>
+    </form>
+{% endblock %}
+

@@ -1,0 +1,41 @@
+{% extends 'index.html' %}
+
+
+{% block content %}
+
+<div id="canceling-message" style="display: none;">Canceling event and notifying attendees...</div>
+
+  <div class="container my-31">
+    <h1 class="event-title">{{ event.title }}</h1>
+    <p class="event-description">{{ event.description }}</p>
+    <p class="event-date"><span class="event-date-label">Date</span> <br> <br>  {{ event.date }}</p>
+    <p class="event-venue"><span class="event-venue-label">Location</span> <br> <br>  {{ event.venue }}</p>
+    {% if current_user.is_authenticated %}
+      {% if current_user.is_organizer %}
+        <form action="{{ url_for('views.event_cancel', event_id=event.id) }}" method="POST">
+          <button type="submit" class="event-cancel" onclick="showCancelingMessage()">Cancel Event</button>
+        </form>
+
+      {% else %}
+
+        <form action="{{ url_for('views.ticket_buy', event_id=event.id) }}" method="POST">
+          <button type="submit" class="ticket-buy">Buy Ticket</button>
+        </form>
+        {% if event.tickets |length == event.capacity %}
+        <p class="is-full">Event is full</p>
+      {% elif event.tickets |length > (0.95 * event.capacity) %}
+        <p>Last {{ event.capacity - event.tickets |length }} spaces left!</p>
+      {% endif %}
+      {% endif %}
+    {% else %}
+    {% if event.tickets |length == event.capacity %}
+    <p class="is-full">Event is full</p>
+  {% elif event.tickets |length > (0.95 * event.capacity) %}
+    <p>Last {{ event.capacity - event.tickets |length }} spaces left!</p>
+    {% else %}
+    <p class="p-guest">If you want to buy a ticket, please login or register </p>
+  {% endif %}
+     
+    {% endif %}
+  </div>
+{% endblock %}

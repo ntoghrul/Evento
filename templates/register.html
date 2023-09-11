@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+{% block title %} Register {% endblock %}
+{% block content %} 
+    <h1>Register</h1>
+    <form class="register-form" method="POST" action="{{ url_for('views.register') }}">
+        <div class="register-firstname">
+            <input type="text" id="first_name" name="first_name" placeholder="Enter first name" required>
+        </div>
+        <div class="register-email">
+            <input type="email" id="email" name="email" placeholder="Enter email" required>
+        </div>
+        <div class="register-password">
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+        </div>
+        <div class="register-password">
+            <input type="password" id="password2" name="password2" placeholder="Confirm password" required>
+        </div>
+        <div class="register-code">
+            <h4>Organizer Code (If you are attendee, please leave this field empty)</h4>
+            <input type="text" id="organizer_code" name="organizer_code" placeholder="Organizer code">
+        </div>
+        <div class="register-button">
+            <input type="submit" value="Register">
+        </div>
+    </form>
+{% endblock %}

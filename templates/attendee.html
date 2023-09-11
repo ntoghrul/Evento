@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+
+{% block content %}
+  <div class="table-container">
+    <h1>List of Attendees</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for attendee in attendees %}
+          <tr>
+            <td>{{ attendee.firstname }}</td>
+            <td>{{ attendee.email }}</td>
+            
+              {% if attendee.is_organizer %}
+                Organizer
+              {% else %}
+              <td>
+                <form action="{{ url_for('views.make_organizer', attendee_id=attendee.id) }}" method="POST">
+                  <button type="submit" class="attendee-button">Make Organizer</button>
+                </form>
+            </td>
+              {% endif %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+ 
+{% endblock %}
