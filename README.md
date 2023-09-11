@@ -10,25 +10,25 @@ Basic functionality is:
 • All users must provide a valid & verifiable email address and a
 password\
 • Users must provide this 8-character code to register as an organiser
-§ Dc5_G1gz
-• User authentication
-• Login with password
-• Adding an event
-• Only organisers can create events
-• Organisers can promote an attendee’s class to organiser of an event
-• Managing events
-• Organisers can cancel an event, but they cannot change the date or time of an event; all attendees with tickets will be notified of any cancellation
-• Organisers will be notified when an event is near capacity
-• Ticket allocation
-• Attendees can request a single ticket for an event in the future
-• Attendees can cancel tickets for events in the future
-• Viewing tickets
-• Attendees can view ticket and barcode for each event for which they have tickets
+ **Dc5_G1gz**\
+• User authentication\
+• Login with password\
+• Adding an event\
+• Only organisers can create events\
+• Organisers can promote an attendee’s class to organiser of an event\
+• Managing events\
+• Organisers can cancel an event, but they cannot change the date or time of an event; all attendees with tickets will be notified of any cancellation\
+• Organisers will be notified when an event is near capacity\
+• Ticket allocation\
+• Attendees can request a single ticket for an event in the future\
+• Attendees can cancel tickets for events in the future\
+• Viewing tickets\
+• Attendees can view ticket and barcode for each event for which they have tickets\
 
 A complete application:
 • Implements the functionality of the basic specification above using Python,
-Flask and Flask-SQLAlchemy with sqlite3.
-• Make use of JavaScript to enhance the user experience.
-• Have a consistent styling.
-• Consider security issues.
-• implements additional features.
+Flask and Flask-SQLAlchemy with sqlite3.\
+• Make use of JavaScript to enhance the user experience.\
+• Have a consistent styling.\
+• Consider security issues.\
+• implements additional features.\
