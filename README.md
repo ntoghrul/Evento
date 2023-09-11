@@ -6,11 +6,9 @@ Creating a ticketing system for events. Events are scheduled by an event organis
 
 Basic functionality is:
 • User registration
-
-• Must have two classes of user – organiser and attendee
-
+• Must have two classes of user – organiser and attendee\
 • All users must provide a valid & verifiable email address and a
-password
+password\
 • Users must provide this 8-character code to register as an organiser
 § Dc5_G1gz
 • User authentication
