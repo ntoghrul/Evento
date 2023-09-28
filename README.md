@@ -7,7 +7,7 @@ Somehow, ./setup.sh does not help to run application.To run this application on 
 3. python3 -m venv venv
 4. source venv/bin/activate
 5. pip install -r requirements.txt
-6. python3.6 main.py -- for DSC machine or python3 main.py -- any other machine.
+6. python3.6 main.py or python3 main.py -- any other machine.
 
 
 
