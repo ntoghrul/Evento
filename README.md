@@ -1,8 +1,8 @@
 !IMPORTANT
 
 
-Somehow, ./setup.sh does not help to run application.To run this application on your DCS machine, follow the steps:
-1. Go the project folder, which is coursework-3 in our case.
+Somehow, ./setup.sh does not help to run application.To run this application on your machine, follow the steps:
+1. Go the project folder.
 2. Run the following commands:
 3. python3 -m venv venv
 4. source venv/bin/activate
